@@ -2,6 +2,7 @@
     "name": "oneline-design-ui",
     "private": true,
     "description": "",
+    "type": "module",
     "scripts": {
         "build": "turbo build",
         "prelint": "pnpm run build",
@@ -11,12 +12,15 @@
         "prettier:fix": "prettier --write '**/*.{ts,tsx,js,jsx,json}'",
         "start:docs": "turbo start:docs --filter ui-docs",
         "build:docs": "turbo build:docs",
-        "build:watch": "turbo build:watch"
+        "build:watch": "turbo build:watch",
+        "publish": "changeset publish"
     },
     "devDependencies": {
+        "@changesets/cli": "^2.29.4",
         "@oneline-design-ui/eslint-config": "workspace:^",
         "@oneline-design-ui/prettier-config": "workspace:^",
         "builtin-modules": "^4.0.0",
+        "eslint": "^9.18.0",
         "prettier": "^3.2.5",
         "turbo": "^2.3.3",
         "typescript": "^5.2.2"
